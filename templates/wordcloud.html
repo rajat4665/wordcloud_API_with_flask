@@ -1,0 +1,60 @@
+{% extends 'navbar.html'%}
+{% block content %}
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <h1 class="h1">This is Wordclod generator.</h1>
+      <h3 class="h2">Here you can genrate interactive images from your text</h3>
+      {% if absolute_path %}
+      <h2>{{absolute_path}}</h2>
+      <img src = {{absolute_path}} alt="images not found">
+      {% else %}
+        <form method="post" action=""  enctype="multipart/form-data">
+          <label class="control-label">Enter your text</label>
+          <input class="form-control"type="textarea" name="file" placeholder="paste your text here">
+          <br>
+          <div >
+            <label for='sell' class="control-label">Choose Font style</label>
+            <select class="form-control" id="sel1" name="font_details">
+              <option>burnstowndam</option>
+              <option>actionj</option
+              <option>SaucerBB</option>
+              <option>AlienFur</option>
+              <option>Amazing_Kids</option>
+              <option>AstronBoyWonder</option>
+              <option>Austhina_Brush_Calligraphy_Scratch</option>
+              <option>fighting</option>
+              <option>BLAME</option>
+              <option>Maxtield</option>
+              <option>Magenta_BBT</option>
+              <option>QuirkyRobot</option>
+              <option>space_age</option>
+              <option>SPACECRAFT</option>
+              <option>induction</option>
+              <option>MIST</option>
+              <option>MYSCARS</option>
+              <option>oreos</option>
+              <option>punk</option>
+              <option>ShogunsClan</option>
+            </select>
+            </div>
+            <br>
+            <div >
+              <label for="sel12" class="control-label">Choose Fig size</label>
+              <select class="form-control" id="sel12" name="image_size">
+                <option>1024×576</option>
+                <option>1280×720(HD)</option>
+                <option>1366×768</option>
+                <option>1920×1080(FHD)</option>
+              </select>
+              </div>
+              <br>
+          <button class="btn btn-success b1"type="submit">Upload</button>
+        </form>
+      {% endif %}
+        <br>
+
+    </div>
+  </div>
+{% endblock %}
+</div>
